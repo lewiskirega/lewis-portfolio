@@ -4,27 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css-files/home.css">
+    <link rel="stylesheet" href="./css-files/navbar.css">
+
     <title>Lewis mk</title>
 </head>
 <body>
     <div class="main">
         <header>
-            <nav>
-                <ul>
-                    <a href=""><li>Home</li></a>
-                    <a href=""><li>About</li></a>
-                    <a href=""><li>Skills</li></a>
-                    <a href=""><li>Projects</li></a>
-                    <a href=""><li>Contact</li></a>
+            <nav class="nav-bar">
+                <ul class="header">
+                    <a href="index.html"><li class="menu-items">Home</li></a>
+                    <a href="/index.html#about"><li class="menu-items">About</li></a>
+                    <a href=""><li class="menu-items">Skills</li></a>
+                    <a href=""><li class="menu-items">Projects</li></a>
+                    <a href=""><li class="menu-items">Contact</li></a>
                     
                 </ul>
             </nav>
         </header>
         <div id="description" class="description">
-            <div class="name">
+            <div class="name hidden">
                 <section class="my-name">
-                    <h1>Lewis kirega</h1>
-                    <p>Junior Front-end Developer</p>
+                    <img src="./Images/lewis.jpg" alt="Picture of Lewis Kirega">
+                    <section class="detail">
+                        <p class="intro">Hi iam, </p>
+                        <h1 class="lewis">Lewis kirega</h1>
+                        <section class="line">
+                            <p class="work">Junior Front-end Developer</p>
+                        </section>
+                    </section>
+
                 </section>
                 <ul class="social">
                     <a href=""><li class="icons"></li></a>
@@ -33,7 +43,7 @@
                     <a href=""><li class="icons"></li></a>
                 </ul>
             </div>
-            <div class="about">
+            <div class="about hidden" id="about">
                 <img src="" alt="Picture of Lewis kirega">
                 <section class="about-me">
                     <h2>About Me</h2>
@@ -42,7 +52,7 @@
                     </p>
                 </section>
             </div>
-            <div class="skills">
+            <div class="skills hidden">
                 <section class="skills">
                     <h2>Skills</h2>
                     <p class="details">
@@ -51,7 +61,7 @@
                 </section>
                 <img src="" alt="computer image">
             </div>
-            <div class="Projects">
+            <div class="Projects hidden">
                 <img src="" alt="picture of my projects">
                 <img src="" alt="Project 2">
                 <img src="" alt="project 3">
