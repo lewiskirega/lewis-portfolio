@@ -1,5 +1,5 @@
 :root{
-    --navbar-text-color: red;
+    --navbar-text-color: #70db32;
     --navbar-menu-items-color: yellow; 
     --menu-items-button-color: rgb(28, 153, 28);
 }
@@ -36,7 +36,7 @@ header{
     list-style: none;
     font-size: 20px;
     padding: 20px 20px;
-    color: red;
+    color: var(--navbar-text-color);
 }
 
 a{

@@ -1,20 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&display=swap');
 
-.description{
-    margin-top: 40px;
-    font-family: 'Alegreya Sans', sans-serif;
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.name{
-    border: solid red 1px;
+:root{
+    --font-family-primary: 'Alegreya Sans', sans-serif;
+    --font-family-secondary: 'Source Code Pro', monospace;
+
+    --font-weight-reg: 300;
+    --font-weight-bold: 900;
+
+    --light: #795b5b;
+    --dark: #222222;
+    --accent: #70db32;
+
+    --font-size-h1: 3rem;
+    --font-size-h2: 2.25rem;
+    --font-size-h3: 1.25rem;
+    --font-size-body: 1rem;
+
 }
-.my-name{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
+
+body{
+    background: var(--light);
+    color: var(--dark);
+    margin: 0;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-body);
+    line-height: 1.6;
+}
+
+
+
+
+/* hedings */
+h1, h2, h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 {font-size: var(--font-size-h1)}
+h2 {font-size: var(--font-size-h2)}
+h3 {font-size: var(--font-size-h3)}
+
+strong {
+    font-weight: var(--font-weight-bold);
+}
+
+:focus {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
 }
 
 img{
@@ -23,28 +61,95 @@ img{
     border: none;
     border-radius: 20px 0 20px 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
 }
 
-.detail{
-    border: 2px solid red;
-    margin-left: 10px;
-    padding: 5px;
-    font-size: 25px;
+/* intro */
+.title {
+    margin-bottom: 0.25em;
+    margin-top: 20px;
 }
 
-.lewis{
-    font-family: 'Alegreya Sans', sans-serif;
-    font-weight: 100px;
-    font-size: larger;
+.title--intro {
+    font-weight: var(--font-weight-reg);
 }
 
-/* .work{
-
+.title--intro strong {
+    display: block;
+    padding-top: 10px;
 }
-.line{
-    background-color: aqua;
-    width: 700px;
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-} */
+.subtitle {
+    margin: 0;
+    font-size: var(--font-size-h3);
+}
+
+.subtitle--intro, 
+.section__subtitle--about {
+    background: var(--accent);
+    padding: 0.25em 1em;
+    font-family: var(--font-family-secondary);
+}
+
+.my-name {
+    position: relative;
+}
+
+/* Meadia quaery */
+@media (min-width: 600px) {
+    .my-name {
+        display: grid;
+        column-gap: 1em;
+        width: min-content;
+        margin: 20px auto;
+        grid-template-areas: 
+                "img title"
+                "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+    .lewis {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+    .subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 12em);
+    }
+    .social{
+        position: relative; 
+        align-items: center;
+        column-gap: 0.5em;
+
+        grid-column: 2;
+        width: calc(100% + 2em); 
+
+
+    }
+}
+
+.subtitle--intro {
+    display: inline-block;
+}
+
+.social li{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 20px;
+    border: none;
+}
+
+a{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
