@@ -9,10 +9,10 @@ header{
     padding: 0px 0px;
     z-index: 10;
     top: 0;
-    left: o;
-    width: 100%;
+    left: 0;
+    width:  100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-image: linear-gradient(115deg, rgba(42, 42, 44, 0.7), rgba(141, 90, 90, 0.7));
+    background-image: linear-gradient(115deg, rgba(75, 26, 26, 0.7), rgba(124, 81, 81, 0.7));
     background-size: cover;
 
 }
@@ -44,3 +44,45 @@ a{
     cursor: pointer;
 }
 
+.my-services {
+    background-color: var(--clr-dark);
+    background-image: url(./images/pexels-monoar-rahman-109371.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+}
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+}
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background-color: currentColor;
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .service + .service {
+        margin-left: 2em;
+    }
+}

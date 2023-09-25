@@ -13,9 +13,9 @@
     --font-weight-reg: 300;
     --font-weight-bold: 900;
 
-    --light: #795b5b;
-    --dark: #222222;
-    --accent: #70db32;
+    --light: rgba(68, 19, 19, 0.856);
+    --dark: #3f3636;
+    --accent: rgb(25, 235, 35);
 
     --font-size-h1: 3rem;
     --font-size-h2: 2.25rem;
@@ -31,6 +31,8 @@ body{
     font-family: var(--font-family-primary);
     font-size: var(--font-size-body);
     line-height: 1.6;
+    /* max-width: 1200px; */
+
 }
 
 
@@ -40,6 +42,7 @@ body{
 h1, h2, h3 {
     line-height: 1;
     margin: 0;
+    color: aliceblue;
 }
 
 h1 {font-size: var(--font-size-h1)}
@@ -60,7 +63,7 @@ img{
     margin-top: 10px;
     border: none;
     border-radius: 20px 0 20px 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(10, 196, 10, 0.753), 0 6px 20px 0 rgba(107, 58, 58, 0.19);
     display: block;
 }
 
@@ -150,6 +153,46 @@ a{
     font-size: 20px;
     font-weight: bold;
 }
+
+
+/* About */
+
+.about{
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--dark);
+    background-image: url("../Images/laptop.jpeg");
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+
+}
+@media (min-width: 600px) {
+    .about-me{
+        text-align: justify;
+        padding-top: 20px;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .details{
+        font-family: var(--font-family-secondary);
+        font-weight: var(--font-weight-reg);
+        font-size: var();
+        max-width: 700px;
+        margin: 10px auto;
+        color: rgb(151, 163, 163);
+        font-size: var(--font-size-body);
+
+    
+}
+}
+
+
 
 
 
