@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+
 :root{
     --font-family-primary: 'Alegreya Sans', sans-serif;
     --font-family-secondary: 'Source Code Pro', monospace;
@@ -31,12 +32,9 @@ body{
     font-family: var(--font-family-primary);
     font-size: var(--font-size-body);
     line-height: 1.6;
-    /* max-width: 1200px; */
+    
 
 }
-
-
-
 
 /* hedings */
 h1, h2, h3 {
@@ -67,34 +65,10 @@ img{
     display: block;
 }
 
-/* intro */
-.title {
-    margin-bottom: 0.25em;
-    margin-top: 20px;
-}
-
-.title--intro {
-    font-weight: var(--font-weight-reg);
-}
-
-.title--intro strong {
-    display: block;
-    padding-top: 10px;
-}
-.subtitle {
-    margin: 0;
-    font-size: var(--font-size-h3);
-}
-
-.subtitle--intro, 
-.section__subtitle--about {
-    background: var(--accent);
-    padding: 0.25em 1em;
-    font-family: var(--font-family-secondary);
-}
 
 .my-name {
     position: relative;
+
 }
 
 /* Meadia quaery */
@@ -103,18 +77,13 @@ img{
         display: grid;
         column-gap: 1em;
         width: min-content;
-        margin: 20px auto;
+        margin: auto;
         grid-template-areas: 
                 "img title"
                 "img subtitle";
         grid-template-columns: min-content max-content;
     }
-    .lewis {
-        grid-area: img;
-        min-width: 250px;
-        position: relative;
-        z-index: 2;
-    }
+
     .subtitle--intro {
         align-self: start;
         grid-column: -1 / 1;
@@ -132,8 +101,6 @@ img{
 
         grid-column: 2;
         width: calc(100% + 2em); 
-
-
     }
 }
 
@@ -157,19 +124,24 @@ a{
 
 /* About */
 
-.about{
-    height: 50vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: var(--dark);
-    background-image: url("../Images/laptop.jpeg");
-    background-size: cover;
-    background-blend-mode: multiply;
-    color: var(--clr-light);
-    text-align: center;
+@media (min-width: 300px) {
+    .about{
+        height: 50vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: var(--dark);
+        background-image: url("../Images/laptop.jpeg");
+        background-size: cover;
+        background-blend-mode: multiply;
+        color: var(--clr-light);
+        text-align: center;
+        width: 100%;
+        margin-top: 50px;
+        padding: 20px;
 
-}
-@media (min-width: 600px) {
+
+    }
+    
     .about-me{
         text-align: justify;
         padding-top: 20px;
@@ -187,10 +159,45 @@ a{
         margin: 10px auto;
         color: rgb(151, 163, 163);
         font-size: var(--font-size-body);
+    }
+    .my-self{
+        margin-top: 120px;
+    }
+    .lewis {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+        margin: 0 30px;
+    }
+    .title {
+    margin-top: 20px;
+    margin-left: 30px;
+    }
 
-    
-}
-}
+    .title--intro {
+        font-weight: var(--font-weight-reg);
+    }
+
+    .title--intro strong {
+        display: block;
+        padding-top: 10px;
+    }
+    .subtitle {
+        margin: 30px;
+        font-size: var(--font-size-h3);
+    }
+
+    .subtitle--intro, 
+    .section__subtitle--about {
+        width: auto;
+        background: var(--accent);
+        padding: 0.3em 1em;
+        font-family: var(--font-family-secondary);
+    }
+}   
+
+
 
 
 
