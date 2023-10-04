@@ -126,7 +126,7 @@ a{
 
 @media (min-width: 300px) {
     .about{
-        height: 50vh;
+        height: 70vh;
         background-size: cover;
         background-repeat: no-repeat;
         background-color: var(--dark);
