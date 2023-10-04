@@ -149,6 +149,7 @@ a{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        padding-bottom: 0.25em;
     }
     
     .details{
